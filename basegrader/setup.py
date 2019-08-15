@@ -17,7 +17,7 @@ setup(
     include_package_data = True,
     data_files = [
         ("share/grader", [
-            "config/config.json"
+            "config/README.md"
         ]),
         ("etc/jupyter/jupyter_notebook_config.d", [
             "jupyter-config/jupyter_notebook_config.d/grader.json"
