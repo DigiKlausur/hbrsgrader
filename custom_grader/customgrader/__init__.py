@@ -3,7 +3,7 @@ from . import api_handlers
 
 def _jupyter_server_extension_paths():
     return [{
-        'module': 'grader'
+        'module': 'customgrader'
     }]
 
 def init_handlers(webapp):
