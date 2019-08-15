@@ -8,26 +8,20 @@ The idea behind this is to build a modular grading architecture that can be easi
 
 The base grader exposes a handler at ```/grader/api/base``` that provides the list of available graders.
 
-The list of available graders is stored in JSON format at:
-
-```<sys_prefix>/usr/share/grader/config.json```
+The list of available graders is stored in JSON format at 
+```<sys_prefix>/usr/share/grader/```
+with one JSON file per grader.
 
 Each grader is registered with a name and url at which the grading service is exposed.
 
-Example:
+Suppose you have a multiple choice grader that is exposed at ```/grader/api/multiplechoice```.
+
+Then you can put a file called ```mc.json``` in the folder ```<sys_prefix>/usr/share/grader/``` with the following content:
 
 ```
 {
-    "graders": [
-        {
-            "name": "multiplechoice",
-            "url": "/grader/api/multiplechoice"
-        },
-        {
-            "name": "code",
-            "url": "/grader/api/code"
-        }
-    ]
+    "name": "multiplechoice",
+    "url": "/grader/api/multiplechoice"
 }
 ```
 
